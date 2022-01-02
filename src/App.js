@@ -1,6 +1,6 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
-import { NavLink, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, NavLink, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { Route } from 'react-router-dom';
 import Home from './views/Home/Home';
 import Player from './views/Player/Player';
 import Players from './views/Players/Players';
@@ -19,10 +19,10 @@ function App() {
         </header>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="teams" component={Teams} />
-          <Route path="teams/:id" component={Team} />
-          <Route path="players" component={Players} />
-          <Route path="players/:id" component={Player} />
+          <Route exact path="/teams" component={Teams} />
+          <Route exact path="/teams/:id" component={Team} />
+          <Route exact path="/players" component={Players} />
+          <Route exact path="/players/:id" component={Player} />
         </Switch>
       </BrowserRouter>
     </div>
