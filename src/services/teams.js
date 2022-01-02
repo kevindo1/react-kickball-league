@@ -11,7 +11,7 @@ export async function fetchTeams() {
   return data;
 }
 
-export async function fetchTeamById(id) {
+export async function fetchTeamsById(id) {
   const resp = await client.from('teams').select('*, players(*)').match({ id }).single();
   return checkError(resp);
 }
