@@ -5,14 +5,15 @@ import TeamDetails from '../../components/TeamDetails';
 
 export default function Team(props) {
   const [team, setTeam] = useState([]);
+  const id = props.match.params.id;
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchTeamsById(props.match.params.id);
+      const data = await fetchTeamsById(id);
       setTeam(data);
     };
     fetchData();
-  }, [props.match.params.id]);
+  }, [id]);
 
   return (
     <div>
