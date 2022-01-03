@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom/cjs/react-router-dom.min';
-import Team from './Team';
+import Team from '../../views/Team/Team';
 
 test('renders selected individual team', () => {
   const container = render(
