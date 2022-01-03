@@ -8,6 +8,5 @@ test('renders selected individual team', () => {
       <Team match={{ params: { id: '1' } }} />
     </MemoryRouter>
   );
-  await screen.getByText('');
   expect(container).toMatchSnapshot();
 });
