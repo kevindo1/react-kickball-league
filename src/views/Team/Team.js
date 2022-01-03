@@ -22,8 +22,13 @@ export default function Team(props) {
   }
 
   return (
-    <div>
-      <TeamDetails team={team} />
-    </div>
+    <>
+      <div>
+        <h2>{team.name}</h2>
+      </div>
+      <div>
+        <TeamDetails team={team} />
+      </div>
+    </>
   );
 }
